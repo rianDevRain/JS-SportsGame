@@ -20,19 +20,17 @@ var resetCount = document.querySelector('#num-resets');
 //change the string to a number
 var resetCounter = Number(resetCount.innerHTML);
 
+// Reset the all the counters and increase reset by 1
 resetButton.addEventListener('click', function() {
-	oneCount = 0;
-	oneGoal = 0;
-	twoCount = 0;
-	twoGoal = 0;
-	teamOneCount.innerHTML = oneCount;
-	teamOneGoal.innerHTML = oneGoal;
-	teamTwoCount.innerHTML = twoCount;
-	teamTwoGoal.innerHTML = twoGoal;
 	resetCounter = resetCounter + 1;
-	resetCount.innerHTML = resetCounter;
+    resetCount.innerHTML = resetCounter;
+    resetCounters();
 })
 
+// increase team one by one
+// used getRandomInt() function I created below
+// if num is greater then 5 the goal counter will increase
+// if not the goal counter will stay the same
 teamOneButton.addEventListener('click', function() {
 	oneCount = oneCount + 1;
 	teamOneCount.innerHTML = oneCount;
@@ -41,6 +39,10 @@ teamOneButton.addEventListener('click', function() {
 	teamOneGoal.innerHTML = oneGoal;
 })
 
+// increase team two by one
+// used getRandomInt() function I created below
+// if num is greater then 5 the counter will increase
+// if not the goal counter will stay the same
 teamTwoButton.addEventListener('click', function() {
 	twoCount = twoCount + 1;
 	teamTwoCount.innerHTML = twoCount;
@@ -49,6 +51,19 @@ teamTwoButton.addEventListener('click', function() {
 	teamTwoGoal.innerHTML = twoGoal;
 })
 
+// reset all counters in memory and on the page
+function resetCounters() {
+	oneCount = 0;
+	oneGoal = 0;
+	twoCount = 0;
+	twoGoal = 0;
+	teamOneCount.innerHTML = oneCount;
+	teamOneGoal.innerHTML = oneGoal;
+	teamTwoCount.innerHTML = twoCount;
+	teamTwoGoal.innerHTML = twoGoal;
+}
+
+// Generate a random number betweeen 1 - 10
 function getRandomInt() {
   return Math.floor(Math.random() * Math.floor(10) + 1);
 }
