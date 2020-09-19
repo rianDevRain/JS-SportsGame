@@ -51,6 +51,8 @@ teamTwoButton.addEventListener('click', function() {
 	teamTwoGoal.innerHTML = twoGoal;
 })
 
+
+
 // reset all counters in memory and on the page
 function resetCounters() {
 	oneCount = 0;

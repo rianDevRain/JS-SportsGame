@@ -1,15 +1,89 @@
-.hide {
-    display: none;
+/** @format */
+
+body {
+	background: url(../img/field.jpg) center/cover fixed;
+	color: whitesmoke;
 }
-.left {
-    float: left;
+.gridContainer {
+	display: grid;
+	height: 100vh;
+	grid-template-areas:
+		". . head . ."
+		". ht1 . ht2 ."
+		". t1 . t2 ."
+		". . r . .";
+	grid-template-columns: 1fr 150px 2fr 150px 1fr;
+	grid-template-rows: 1fr 1fr 2fr 3fr;
+	// gap: 10px;
+	background-color: rgba(0, 0, 0, 0.637);
+    align-content: center;
+    box-shadow: 0 0 10px black;
+	.button:hover {
+		background-color: #2ee59d;
+		box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+		color: #fff;
+		transform: translateY(7px);
+	}
+	.button {
+		width: 90px;
+		height: 45px;
+		text-transform: uppercase;
+		letter-spacing: 2.5px;
+		font-weight: 500;
+		color: #000;
+		background-color: #fff;
+		border: none;
+		border-radius: 45px;
+		box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+		transition: all 0.3s ease 0s;
+		cursor: pointer;
+        outline: none;
+        
+	}
+	.item {
+		align-self: center;
+		justify-self: center;
+		text-align: center;
+	}
+	.header {
+        grid-area: head;
+        font-size: 3rem;
+	}
+	.goals1 {
+		grid-area: t1;
+	}
+	.goals2 {
+		grid-area: t2;
+	}
+
+	.teamTwo {
+        display: block;
+        grid-area: ht2;
+        font-size: 2rem;
+        justify-self: self-start;;
+	}
+	.teamOne {
+        grid-area: ht1;
+        font-size: 2rem;
+        justify-self: self-end;
+	}
+	.reset {
+		grid-area: r;
+	}
 }
-.right {
-    float: right;
-}
-.clear {
-    clear: both;
-}
-#reset-container, h1 {
-    text-align: center;
-}
+
+// .hide {
+//     display: none;
+// }
+// .left {
+//     float: left;
+// }
+// .right {
+//     float: right;
+// }
+// .clear {
+//     clear: both;
+// }
+// #reset-container, h1 {
+//     text-align: center;
+// }

@@ -5,39 +5,38 @@
     <link rel="stylesheet" href="./assets/style/style.css">
 </head>
 <body>
-    <div>
-        <h1>My JS Game</h1>
-        <div id="reset-container">
-            <button id="reset-button">RESET</button><br>
+    <div class="gridContainer">
+        <h1 class="header item" >My JS Game</h1>
+        <div id="reset-container" class="item reset">
+            <button id="reset-button" class="button">RESET</button><br>
             NUMBER OF RESETS: <span id="num-resets">0</span>
         </div>
-        <div class="clear"></div>
-        <div class="left">
-            <h2>
-                Team 1
-            </h2>
-            <div class="goals">
-                SHOTS TAKEN: <span id="teamone-numshots">0</span><br>
-                GOALS: <span id="teamone-numgoals">0</span>
-            </div>
-            <div>
-                <button id="teamone-shoot-button">SHOOT</button>
-            </div>
+        
+        
+        <h2 class="teamOne item">
+            Team 1
+        </h2>
+        <div class="goals1 item">
+            SHOTS TAKEN: <span id="teamone-numshots">0</span><br>
+            GOALS: <span id="teamone-numgoals">0</span>
+        
+            <button id="teamone-shoot-button" class="button">SHOOT</button>
         </div>
-        <div class="right">
-            <h2>
-                Team 2
-            </h2>
-            <div class="goals">
-                SHOTS TAKEN: <span id="teamtwo-numshots">0</span><br>
-                GOALS: <span id="teamtwo-numgoals">0</span>
-            </div>
-            <div>
-                <button id="teamtwo-shoot-button">SHOOT</button>
-            </div>
+    
+    
+        <h2 class="teamTwo item">
+            Team 2
+        </h2>
+        <div class="goals2 item">
+            SHOTS TAKEN: <span id="teamtwo-numshots">0</span><br>
+            GOALS: <span id="teamtwo-numgoals">0</span>
+        
+            <button id="teamtwo-shoot-button" class="button">SHOOT</button>
+        </div>
         </div>
         <script src="./assets/javascript/game.js"></script>
-        <div class="clear"></div>
+        
     </div>
+    <span>Photo by <a href="https://unsplash.com/@hhh13?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">傅甬 华</a> on <a href="https://unsplash.com/s/photos/soccer-field-from-above?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
 </body>
 </html>
