@@ -1,4 +1,4 @@
-# JS-SportsGame
+sportsGame
  Assessment for Kenzie
 Game Instructions
 How should this game work?
